@@ -17,7 +17,6 @@ def swipe(n):
         last_digit = n % 10
         print(last_digit)
         swipe(n // 10)
-        
         print(last_digit)
         
 def skip_factorial(n):
@@ -28,7 +27,7 @@ def skip_factorial(n):
     >>> skip_factorial(8) # 8 * 6 * 4 * 2
     384
     """
-    if n == 2:
+    if n == 2:    #improve: if n <= 2: return n
         return 2
     elif n == 1:    
         return 1
@@ -80,12 +79,12 @@ def hailstone(n):
         return odd(n)
 
 def even(n):
-    return hailstone(n // 2)
+    return 1+ hailstone(n // 2)
 
 def odd(n):
     if n == 1:
         return 1
-    return hailstone(n * 3 + 1)
+    return 1 + hailstone(n * 3 + 1)
    
 
 
